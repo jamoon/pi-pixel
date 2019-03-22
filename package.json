@@ -1,0 +1,17 @@
+{
+  "name": "pi-pixel",
+  "version": "1.0.0",
+  "description": "Sample Raspberry Pi Code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dgram": "~1.0.1",
+    "buffer": "~5.0.2",
+    "rpi-ws281x-native": "~0.8.1",
+    "wiring-pi": "latest"
+  },
+  "author": "Moon",
+  "license": "ISC"
+}
