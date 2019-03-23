@@ -14,4 +14,5 @@ setInterval(function() {
 	isLedOn = +!isLedOn;
 	//isLedOn = !isLedOn;
 	wpi.digitalWrite(configPin, isLedOn );
+	console.log(`Pin ${configPin} status: ${isLedOn}`)
 }, configTimeout);
