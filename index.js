@@ -9,7 +9,7 @@ let setupPin12 = gpiop.setup(12, gpio.DIR_OUT);
 
 Promise.all([setupPin11, setupPin12]).then(() => {
 
-	setTimeout(function() {
+	setInterval(function() {
 		onOff = !onOff;
 		gpio.write(11, onOff);
 		gpio.write(12, !onOff);
