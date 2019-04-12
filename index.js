@@ -1,7 +1,7 @@
 var gpio = require('rpi-gpio')
 var gpiop = gpio.promise;
 
-let delay = 2000;
+let delay = 1000;
 let onOff = true;
 
 let setupPin11 = gpiop.setup(11, gpio.DIR_OUT);
