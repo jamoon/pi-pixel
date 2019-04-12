@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "wiring-pi": "*"
+    "rpi-gpio": "^2.1.3"
   },
   "author": "Moon",
   "license": "ISC"

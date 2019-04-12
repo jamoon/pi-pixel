@@ -1,18 +1,14 @@
-var wpi = require('wiring-pi');
+var gpio = require('rpi-gpio')
+var gpiop = gpio.promise;
 
-// GPIO pin of the led
-var configPin = 7;
-// Blinking interval in usec
-var configTimeout = 1000;
+gpiop.setup(11, gpio.DIR_OUT).then(() => {
+	return gpiop.write(7, true)
+}).catch((err) => {
+	console.log('Error: ', err.toString())
+});
 
-wpi.setup('wpi');
-wpi.pinMode(configPin, wpi.OUTPUT);
-
-var isLedOn = 0;
-
-setInterval(function() {
-	isLedOn = +!isLedOn;
-	//isLedOn = !isLedOn;
-	wpi.digitalWrite(configPin, isLedOn );
-	console.log(`Pin ${configPin} status: ${isLedOn}`)
-}, configTimeout);
+gpiop.setup(12, gpio.DIR_OUT).then(() => {
+	return gpiop.write(7, true)
+}).catch((err) => {
+	console.log('Error: ', err.toString())
+})
