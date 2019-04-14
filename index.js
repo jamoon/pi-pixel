@@ -14,7 +14,7 @@ let blink = function() {
 };
 
 Promise.all([setupPin11, setupPin12]).then(() => {
-	setInterval(blink, 1000);
+	setInterval(blink, 500);
 }).catch((err) => {
 	console.log('Error: ', err.toString())
 });
