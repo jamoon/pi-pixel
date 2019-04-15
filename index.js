@@ -36,6 +36,8 @@ let blink = function () {
 
 const runLights = async () => {
 	while (true) {
+		console.log('Run Lights...');
+		
 		// BLINK GREEN
 		gpio.write(11, on);
 		gpio.write(11, off);
